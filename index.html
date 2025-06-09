@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Proyecto: Página Personal de Estudiante
+    Descripción: Página web simple que muestra información básica del estudiante
+    Autor: [Tu nombre]
+    Fecha: 2024
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Estudiante</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-section {
+            margin-bottom: 2rem;
+        }
+
+        .profile-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .matricula {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 1rem 0;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .info-card {
+            background: #f7fafc;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-title {
+            color: #4a5568;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-text {
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .matricula {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <!-- Sección de Perfil -->
+        <div class="profile-section">
+            <div class="profile-icon">
+                👨‍🎓
+            </div>
+            
+            <!-- Nombre del Estudiante -->
+            <h1 id="nombreEstudiante">Maicol Alberto Amezquita Camargo</h1>
+            
+            <!-- Matrícula del Estudiante -->
+            <div class="matricula" id="matriculaEstudiante">
+                Matrícula: 8040182@unamad.edu.pe
+            </div>
+        </div>
+
+        <!-- Información Adicional -->
+        <div class="info-card">
+            <div class="info-title">Información del Curso</div>
+            <div class="info-text">
+                Desarrollo Web I<br>
+                Universidad Nacional Amazónica de Madre de Dios<br>
+                Semestre: 2024
+            </div>
+        </div>
+
+        <!-- Pie de Página -->
+        <div class="footer">
+            <p>Proyecto de Desarrollo Web - OOCSS</p>
+            <p>© 2024 - Todos los derechos reservados</p>
+        </div>
+    </div>
+
+    <script>
+        // Script para personalizar fácilmente la información
+        document.addEventListener('DOMContentLoaded', function() {
+            // TODO: Actualiza estos valores con tu información personal
+            const nombre = "Maicol Alberto Amezquita Camargo";
+            const matricula = "8040182@unamad.edu.pe";
+            
+            // Actualizar elementos en la página
+            document.getElementById('nombreEstudiante').textContent = nombre;
+            document.getElementById('matriculaEstudiante').textContent = `Matrícula: ${matricula}`;
+            
+            // Actualizar título de la página
+            document.title = `${nombre} - Información del Estudiante`;
+        });
+    </script>
+</body>
+</html> 
